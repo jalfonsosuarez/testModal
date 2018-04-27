@@ -1,0 +1,38 @@
+<div class="fondo-negro animated fade-in" [ngClass]="_mdlClienteService.oculto">
+
+    <div class="modal" style="display: block;" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button (click)="_mdlClienteService.ocultarModal()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-2 text-right">
+                            Nombre
+                        </div>
+                        <div class="col-md-10">
+                            <input [(ngModel)]="_mdlClienteService.nombre" name="nombre" type="text" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 text-right">
+                            Domicilio
+                        </div>
+                        <div class="col-md-10">
+                            <input [(ngModel)]="_mdlClienteService.domicilio " name="domicilio " type="text " class="form-control " required>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer ">
+                    <button (click)="_mdlClienteService.btnAceptar()" type="button " class="btn btn-primary ">Aceptar</button>
+                    <button (click)="_mdlClienteService.ocultarModal() " type="button " class="btn btn-secondary ">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
